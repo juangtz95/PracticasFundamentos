@@ -1,5 +1,7 @@
 package mx.com.naat.TiendaMascotas.Interfaces;
 
+import mx.com.naat.TiendaMascotas.ServiceTickets;
+
 import java.time.LocalDateTime;
 
 public interface ServiceOrder {
@@ -10,6 +12,6 @@ public interface ServiceOrder {
 
     LocalDateTime date = null;
 
-    public boolean sendOrder ();
+    public boolean sendOrder (ServiceTickets st);
 
 }

@@ -1,6 +1,6 @@
 
 package mx.com.naat.TiendaMascotas;
 
-public class ServiceTickets{
+public class ServiceTickets extends Model{
 
 }

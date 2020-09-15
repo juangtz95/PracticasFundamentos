@@ -45,5 +45,5 @@ public class Model implements CRUD {
     public boolean deleteRow() {
         return false;
     }
-    
+
 }
