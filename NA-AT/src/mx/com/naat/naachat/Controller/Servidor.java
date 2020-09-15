@@ -31,10 +31,12 @@ public class Servidor extends Thread{
             while (true){
                 cliente = new Socket();
                 System.out.println("Esperando al usuario...");
-                if(servidor.accept()!= null)System.out.println("Usuario conectado...");
-                ObjectOutputStream envio = new ObjectOutputStream(cliente.getOutputStream());
-                envio.writeObject(mensaje);
-
+                cliente = servidor.accept();
+                if(cliente != null) {
+                    ObjectOutputStream envio = new ObjectOutputStream(cliente.getOutputStream());
+                    envio.writeObject(mensaje);
+                    envio.close();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

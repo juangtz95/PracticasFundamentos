@@ -3,19 +3,20 @@ package mx.com.naat.naachat.Vista;
 import java.util.Date;
 
 public class Mensaje {
-    String Mensaje = "";
-    Date hora;
+
+    String mensaje = "";
+    String hora;
 
     public String getMensaje() {
-        return Mensaje;
+        return mensaje;
     }
 
     public void setMensaje(String mensaje) {
-        Mensaje = mensaje;
+        mensaje = mensaje;
     }
 
     public void setHora() {
-        this.hora = new Date();
+        this.hora = new Date().toString();
     }
 
 }
