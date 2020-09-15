@@ -14,12 +14,8 @@ public class Mensaje {
         Mensaje = mensaje;
     }
 
-    public Date getHora() {
-        return hora;
-    }
-
-    public void setHora(Date hora) {
-        this.hora = hora;
+    public void setHora() {
+        this.hora = new Date();
     }
 
 }
