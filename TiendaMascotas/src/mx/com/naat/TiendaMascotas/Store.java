@@ -6,10 +6,26 @@ package mx.com.naat.TiendaMascotas;
 * Modulo Fundamentos de JAVA
 * */
 
+import mx.com.naat.TiendaMascotas.Interfaces.ServiceOrder;
+
 public class Store {
 
     public static void main(String [] args){
         System.out.println("Bienvenido a la tienda ");
+    }
+
+    public String getSupport(){
+        ServiceOrder serviceOrder = new ServiceOrder() {
+            @Override
+            public boolean sendOrder() {
+                return false;
+            }
+        };
+    }
+
+    public String getHome(){
+        Stock s = new Stock();
+
     }
 
 }

@@ -5,13 +5,10 @@ package mx.com.naat.TiendaMascotas;
  * Modulo Fundamentos de JAVA
  * */
 
+import mx.com.naat.TiendaMascotas.Interfaces.CRUD;
+
 import java.lang.reflect.Array;
 
-public class Pets {
-
-    public Array getPets(String type){
-
-    }
-
+public class Pets extends Model {
 
 }
