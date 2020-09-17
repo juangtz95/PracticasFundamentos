@@ -1,3 +1,7 @@
+/*
+* Ejercicio uno conexion server cliente para un pequeño chat.
+*/
+
 public class Usuario {
     private String Name;
     private String Apellidos;

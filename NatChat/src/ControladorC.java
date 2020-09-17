@@ -1,3 +1,7 @@
+/*
+* Ejercicio uno controlador server para la conexion server cliente para un pequeño chat.
+*/
+
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;

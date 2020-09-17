@@ -1,3 +1,7 @@
+/*
+* Ejercicio uno conexion datos del mensaje server cliente para un pequeño chat.
+*/
+
 import java.io.Serializable;
 import java.util.Date;
 
