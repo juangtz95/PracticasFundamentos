@@ -1,4 +1,4 @@
-package server;
+package com.mx.naat.chat.vista;
 
 public class Server {
 
