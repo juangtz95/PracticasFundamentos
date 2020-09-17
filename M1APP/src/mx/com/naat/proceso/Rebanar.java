@@ -10,8 +10,8 @@ public class Rebanar {
         Double cortar=Math.random()*8;
         numeroPanes = Integer.parseInt(cortar.toString());
         //El pan se debe cortar en 8 rebanadas para pasar al empaquetado
-        if (numeroPanes==8) return false;
-        return true;
+        if (numeroPanes==8) return true;
+        return false;
     }
 
 
