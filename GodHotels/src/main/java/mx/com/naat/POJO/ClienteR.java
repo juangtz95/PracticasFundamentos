@@ -1,26 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package mx.com.naat.POJO;
 
 /**
- *
- * @author mbpro-198
+ * Clase ClienteR con todos sus atributos.
+ * @author Juan de Dios Gutierrez
  */
-public class Cliente{
+public class ClienteR{
     
     private String nombre;
     private boolean miembro;
     private String tarjetaNo;
     private String correo;
     
-    public Cliente(){
+    public ClienteR(){
         
     }
     
-    public Cliente(String nombre, boolean miembro, String tarjetaNo, String correo) {
+    public ClienteR(String nombre, boolean miembro, String tarjetaNo, String correo) {
         this.nombre = nombre;
         this.miembro = miembro;
         this.tarjetaNo = tarjetaNo;

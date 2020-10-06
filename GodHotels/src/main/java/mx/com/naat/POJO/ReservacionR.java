@@ -9,18 +9,18 @@ package mx.com.naat.POJO;
  *
  * @author mbpro-198
  */
-public class Reservacion{
+public class ReservacionR{
     
     private int noCuartos;
     private int dias;
     private boolean comida;
-    private Habitacion habitacion;
+    private HabitacionR habitacion;
     
-    public Reservacion() {
+    public ReservacionR() {
         
     }
     
-    public Reservacion(int noCuartos, Habitacion habitacion, int dias, boolean comida) {
+    public ReservacionR(int noCuartos, HabitacionR habitacion, int dias, boolean comida) {
         this.noCuartos = noCuartos;
         this.dias = dias;
         this.comida = comida;
@@ -34,11 +34,11 @@ public class Reservacion{
         this.noCuartos = noCuartos;
     }
 
-    public void setHabitacion(Habitacion habitacion) {
+    public void setHabitacion(HabitacionR habitacion) {
         this.habitacion = habitacion;
     }
 
-    public Habitacion getHabitacion() {
+    public HabitacionR getHabitacion() {
         return habitacion;
     }
 

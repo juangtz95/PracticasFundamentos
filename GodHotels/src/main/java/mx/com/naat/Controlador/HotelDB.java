@@ -2,9 +2,9 @@
 package mx.com.naat.Controlador;
 
 import java.util.List;
-import mx.com.naat.POJO.Cliente;
-import mx.com.naat.POJO.Habitacion;
-import mx.com.naat.POJO.Reservacion;
+import mx.com.naat.POJO.ClienteR;
+import mx.com.naat.POJO.HabitacionR;
+import mx.com.naat.POJO.ReservacionR;
 
 /**
  *
@@ -14,35 +14,35 @@ import mx.com.naat.POJO.Reservacion;
  */
 public class HotelDB {
     
-    private List<Cliente> clientes;
-    private List<Habitacion> habitaciones;
-    private List<Reservacion> reservacions;
+    private List<ClienteR> clientes;
+    private List<HabitacionR> habitaciones;
+    private List<ReservacionR> reservacions;
     
     /*
         * Lista de clientes obtener.
     */
-    public List<Cliente> getClientes() {
+    public List<ClienteR> getClientes() {
         return clientes;
     }
     
     /*
         * @param Lista de clientes guardar.
     */
-    public void setClientes(List<Cliente> clientes) {
+    public void setClientes(List<ClienteR> clientes) {
         this.clientes = clientes;
     }
     
     /*
         * @param Lista de habitacion obtener.
     */
-    public List<Habitacion> getHabitaciones() {
+    public List<HabitacionR> getHabitaciones() {
         return habitaciones;
     }
     
     /*
         * @param Lista de habitaciones guardar.
     */
-    public void setHabitaciones(List<Habitacion> habitaciones) {
+    public void setHabitaciones(List<HabitacionR> habitaciones) {
         this.habitaciones = habitaciones;
     }
     
@@ -50,14 +50,14 @@ public class HotelDB {
     /*
         * @param Lista de reservacion obtener.
     */
-    public List<Reservacion> getReservacions() {
+    public List<ReservacionR> getReservacions() {
         return reservacions;
     }
     
     /*
         * @param Lista de reservaciones guardar.
     */
-    public void setReservacions(List<Reservacion> reservacions) {
+    public void setReservacions(List<ReservacionR> reservacions) {
         this.reservacions = reservacions;
     }
     

@@ -5,15 +5,42 @@
  */
 package mx.com.naat.DAO;
 
+import java.util.List;
+import mx.com.naat.Controlador.HotelDB;
+import mx.com.naat.POJO.ClienteR;
+
 /**
  *
- * @author mbpro-198
+ * @author Juan de Dios Gutierrez
  */
 public class Cliente implements CRUD{
     
+    private List<ClienteR> lista;
+    private HotelDB hotelDB;
+    
+    public boolean getConectar(){
+        hotelDB = new HotelDB();
+        if(hotelDB != null){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public void listCliente(){
+        this.lista = hotelDB.getClientes();
+    }
+    
     @Override
     public boolean agregar(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(((ClienteR)o).getCorreo() != "" && ((ClienteR)o).getNombre() != "" &&
+                ((ClienteR)o).getTarjetaNo() != ""){
+            lista.add((ClienteR)o);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override

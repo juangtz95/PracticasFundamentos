@@ -9,7 +9,7 @@ package mx.com.naat.POJO;
  *
  * @author mbpro-198
  */
-public class Habitacion {
+public class HabitacionR {
     
     private double precio;
     private int capacidad;
@@ -18,7 +18,7 @@ public class Habitacion {
     private boolean jacuzzi;
     private boolean rentado;
 
-    public Habitacion(double precio, int capacidad, int idHabitacion, int camas, boolean jacuzzi, boolean rentado) {
+    public HabitacionR(double precio, int capacidad, int idHabitacion, int camas, boolean jacuzzi, boolean rentado) {
         this.precio = precio;
         this.capacidad = capacidad;
         this.idHabitacion = idHabitacion;

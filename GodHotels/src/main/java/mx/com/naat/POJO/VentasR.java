@@ -11,35 +11,35 @@ import mx.com.naat.Controlador.Calcular;
  *
  * @author mbpro-198
  */
-public class Ventas {
+public class VentasR {
     
-    private Cliente cliente;
-    private Reservacion reservacion;
+    private ClienteR cliente;
+    private ReservacionR reservacion;
     private Calcular calcular;
     
-    public Ventas(){
+    public VentasR(){
         
     }
     
-    public Ventas(Cliente cliente, Reservacion reservacion, Calcular calcular) {
+    public VentasR(ClienteR cliente, ReservacionR reservacion, Calcular calcular) {
         this.cliente = cliente;
         this.reservacion = reservacion;
         this.calcular = calcular;
     }
 
-    public Cliente getCliente() {
+    public ClienteR getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(ClienteR cliente) {
         this.cliente = cliente;
     }
 
-    public Reservacion getReservacion() {
+    public ReservacionR getReservacion() {
         return reservacion;
     }
 
-    public void setReservacion(Reservacion reservacion) {
+    public void setReservacion(ReservacionR reservacion) {
         this.reservacion = reservacion;
     }
 
