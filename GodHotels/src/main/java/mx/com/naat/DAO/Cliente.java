@@ -1,10 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *
  */
 package mx.com.naat.DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 import mx.com.naat.Controlador.HotelDB;
 import mx.com.naat.POJO.ClienteR;
@@ -29,13 +28,22 @@ public class Cliente implements CRUD{
     }
     
     public void listCliente(){
+        //this.lista = hotelDB.getClientes();
+        this.lista = new ArrayList<ClienteR>();
+    }
+    
+    public void listaDB(){
         this.lista = hotelDB.getClientes();
+    }
+    
+    public void guardarLista(){
+        hotelDB.setClientes(lista);
     }
     
     @Override
     public boolean agregar(Object o) {
-        if(((ClienteR)o).getCorreo() != "" && ((ClienteR)o).getNombre() != "" &&
-                ((ClienteR)o).getTarjetaNo() != ""){
+        if(!((ClienteR)o).getCorreo().isEmpty() && !((ClienteR)o).getNombre().isEmpty() &&
+                !((ClienteR)o).getTarjetaNo().isEmpty() && ((ClienteR)o).getTarjetaNo().length() == 16){
             lista.add((ClienteR)o);
             return true;
         }else{
@@ -45,27 +53,57 @@ public class Cliente implements CRUD{
 
     @Override
     public boolean buscarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(lista.isEmpty()){
+            return false;
+        }else{
+            for(ClienteR e:lista){
+                System.out.println("Nombre: " + e.getNombre() + " No. Tarjeta: " + e.getTarjetaNo() 
+                        + " Membresia: " + e.isMiembro() + " Correo: " + e.getCorreo());
+            }
+            return true;
+        }
     }
 
     @Override
     public boolean buscarPorId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(lista.get(id) != null && id < lista.size()){
+            ClienteR clienter = lista.get(id);
+            System.out.println("Nombre: " + clienter.getNombre() + " No. Tarjeta: " + clienter.getTarjetaNo() 
+                        + " Membresia: " + clienter.isMiembro() + " Correo: " + clienter.getCorreo());
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public boolean elimarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        lista.clear();
+        if(lista.isEmpty()){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public boolean elimarPorId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(lista.get(id) != null && id < lista.size()){
+           lista.remove(id);
+           return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
-    public boolean modificar(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean modificar(Object a,Object m) {
+        if(lista.contains((ClienteR)a)){
+            lista.set(lista.indexOf(((ClienteR)a)),((ClienteR)m));
+            return true;
+        } else {
+            return false;
+        }
     }
     
 }
