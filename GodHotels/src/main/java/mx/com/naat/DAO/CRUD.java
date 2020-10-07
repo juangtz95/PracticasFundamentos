@@ -16,6 +16,6 @@ public interface CRUD {
     public boolean buscarPorId(int id);
     public boolean elimarTodos();
     public boolean elimarPorId(int id);
-    public boolean modificar(Object o);
+    public boolean modificar(Object a, Object m);
     
 }

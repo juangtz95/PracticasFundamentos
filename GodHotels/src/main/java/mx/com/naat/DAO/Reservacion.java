@@ -37,7 +37,7 @@ public class Reservacion implements CRUD{
     }
 
     @Override
-    public boolean modificar(Object o) {
+    public boolean modificar(Object a, Object m) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
